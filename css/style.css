@@ -1,0 +1,101 @@
+.banner {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5); /* 将 alpha 通道值调整为 0.5，表示 50% 的不透明度 */
+    padding: 100px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 修改为居中对齐 */
+    margin-top: 300px; /* 给顶部横幅留出空间 */
+}
+
+.sidebar {
+    width: 100%; /* 修改为100%以占据整个容器的宽度 */
+    background: #ffffff;
+    color: #333;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s;
+}
+
+.avatar {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    transition: transform 0.3s;
+}
+.avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.avatar:hover img {
+    transform: scale(1.1);
+}
+
+.nav {
+    width: 100%;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav ul li {
+    margin: 10px 0;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav ul li a:hover {
+    background: #f1f1f1;
+    color: #000;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* 媒体查询 */
+@media only screen and (min-width: 768px) {
+    .container {
+        flex-direction: row; /* 在大屏幕上将容器布局改为水平方向 */
+        align-items: flex-start; /* 水平方向布局时，侧边栏从顶部开始 */
+    }
+
+    .sidebar {
+        width: 220px; /* 恢复侧边栏的固定宽度 */
+        transition: none; /* 取消侧边栏的宽度过渡效果 */
+    }
+
+    .content {
+        flex: 1; /* 让内容区域占据剩余的可用空间 */
+        margin-left: 20px; /* 在大屏幕上增加内容与侧边栏之间的间距 */
+    }
+}
