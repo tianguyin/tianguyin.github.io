@@ -1,6 +1,18 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../picture/avatar.jpg");
+    background-size: cover;
+}
+
 .banner {
     width: 100%;
-    background: rgba(255, 255, 255, 0.5); /* 将 alpha 通道值调整为 0.5，表示 50% 的不透明度 */
+    background: rgba(255, 255, 255, 0.5);
     padding: 100px 0;
     text-align: center;
     position: fixed;
@@ -12,26 +24,26 @@
 .container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* 修改为居中对齐 */
-    margin-top: 300px; /* 给顶部横幅留出空间 */
+    align-items: center;
+    margin-top: 300px;
+    padding: 20px;
 }
 
 .sidebar {
-    width: 100%; /* 修改为100%以占据整个容器的宽度 */
+    width: 100%;
     background: #ffffff;
     color: #333;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: width 0.3s;
 }
 
 .avatar {
     margin-bottom: 20px;
     display: flex;
-    justify-content: center; /* 水平居中 */
-    align-items: center; /* 垂直居中 */
-    transition: transform 0.3s;
+    justify-content: center;
+    align-items: center;
 }
+
 .avatar img {
     width: 100px;
     height: 100px;
@@ -82,20 +94,42 @@ p {
     line-height: 1.6;
 }
 
-/* 媒体查询 */
+.blogs {
+    display: flex;
+    flex-wrap: wrap; /* 允许内容换行 */
+    justify-content: center; /* 水平居中 */
+    gap: 50px; /* 添加间距 */
+}
+
+.blog {
+    margin-left: 100px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 40px;
+    width: auto;
+    max-width: 90%;
+    text-align: center;
+}
+
+.blog:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
 @media only screen and (min-width: 768px) {
     .container {
-        flex-direction: row; /* 在大屏幕上将容器布局改为水平方向 */
-        align-items: flex-start; /* 水平方向布局时，侧边栏从顶部开始 */
+        flex-direction: row;
+        align-items: flex-start;
     }
 
     .sidebar {
-        width: 220px; /* 恢复侧边栏的固定宽度 */
-        transition: none; /* 取消侧边栏的宽度过渡效果 */
+        width: 220px;
     }
 
     .content {
-        flex: 1; /* 让内容区域占据剩余的可用空间 */
-        margin-left: 20px; /* 在大屏幕上增加内容与侧边栏之间的间距 */
+        flex: 1;
+        margin-left: 20px;
     }
 }
