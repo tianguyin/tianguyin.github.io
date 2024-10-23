@@ -3,9 +3,19 @@
 import { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
 import Link from "next/link";
+interface Event {
+  name: string;
+  type: string;
+  comp_time_start: string;
+  comp_time_end: string;
+  reg_time_start: string;
+  reg_time_end: string;
+  status: string;
+  link: string;
+}
 
 export default function EventsPage() {
-  const [eventData, setEventData] = useState<any[]>([]); // 存储比赛数据
+  const [eventData, setEventData] = useState<Event[]>([]);
   const [currentPage, setCurrentPage] = useState(1); // 当前页
   const eventsPerPage = 6; // 每页显示的比赛数量
 

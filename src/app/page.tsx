@@ -1,5 +1,6 @@
 "use client"; // 确保这是一个客户端组件
 
+import Link from "next/link"; // 确保导入 Link 组件
 import { SetStateAction, useEffect, useState } from "react";
 import { Flag } from "lucide-react";
 import EventsPage from "./events"; // 导入 EventsPage 组件
@@ -84,10 +85,10 @@ export default function Component() {
       {/* 导航栏 */}
       <nav className="flex items-center justify-between p-6 bg-white shadow-md">
       <div className="flex items-center">
-        <a href="/" className="flex items-center"> {/* 设置跳转链接 */}
+        <Link href="/" className="flex items-center"> {/* 设置跳转链接 */}
           <img src="logo.png" alt="云音计划 Logo" className="h-12 w-12 mr-2" />
           <span className="text-2xl font-bold text-orange-500">云音计划</span>
-        </a>
+        </Link>
         </div>
         <div className="flex space-x-4">
           <a 
