@@ -40,6 +40,7 @@ export default function DynamicNavigation() {
       console.error('Error fetching content:', error);
     }
   };
+  
 
   const handleTypeClick = (type: string) => {
     setSelectedType(type === selectedType ? null : type);
