@@ -5,6 +5,8 @@ import { SetStateAction, useEffect, useState } from "react";
 import { Flag } from "lucide-react";
 import EventsPage from "./events"; // 导入 EventsPage 组件
 import ContactPage from "./contact"; // 导入 ContactPage 组件
+import MarkdownPage from "./MarkdownPage";
+
 
 const slides = [
   {
@@ -103,6 +105,10 @@ export default function Component() {
           >
             比赛列表
           </a>
+          <a onClick={() => handlePageChange("markdown")} 
+                        className="hover:bg-orange-300 transition duration-300 cursor-pointer px-3 py-2 rounded"
+            >知识库
+            </a> {/* 添加Markdown页面链接 */}
           <a 
             onClick={() => handlePageChange("contact")} 
             className="hover:bg-orange-300 transition duration-300 cursor-pointer px-3 py-2 rounded"
@@ -134,6 +140,7 @@ export default function Component() {
           {currentPage === "events" && <EventsPage />}
           {/* 嵌入 ContactPage 组件 */}
           {currentPage === "contact" && <ContactPage />}
+          {currentPage === "markdown" && <MarkdownPage />} {/* 添加Markdown页面的条件渲染 */}
         </div>
       </main>
 
