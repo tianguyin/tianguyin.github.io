@@ -21,7 +21,7 @@ export default function DynamicNavigation() {
 
   const fetchNavItems = async () => {
     try {
-      const response = await fetch('https://icu.tiangucloud.org/markdown.json');
+      const response = await fetch('/markdown.json');
       const data: NavItem[] = await response.json();
       console.log(data);
       setNavItems(data);
@@ -32,10 +32,10 @@ export default function DynamicNavigation() {
 
   const fetchContent = async (path: string, markdown: string) => {
     try {
-      const response = await fetch(path + markdown);
-      const data = await response.text();
-      const htmlContent = marked(data); // 将 Markdown 转换为 HTML
-      setContent(htmlContent); // 直接设置 htmlContent
+      const response = fetch(path + markdown);
+      const data = (await response).text();
+      const htmlContent = marked(await data); // 将 Markdown 转换为 HTML
+      setContent(await htmlContent); // 直接设置 htmlContent
     } catch (error) {
       console.error('Error fetching content:', error);
     }
