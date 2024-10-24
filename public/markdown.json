@@ -17,7 +17,7 @@
     {
       "type": "pwn",
       "path": "https://icu.tiangucloud.org/markdown/pwn",
-      "markdown": "mprotect函数可以修改内存栈的权限,"
+      "markdown": "mprotect函数可以修改内存栈的权限"
     },
     {
       "type": "reverse",
