@@ -108,7 +108,7 @@ export default function Component() {
           <a onClick={() => handlePageChange("markdown")} 
                         className="hover:bg-orange-300 transition duration-300 cursor-pointer px-3 py-2 rounded"
             >知识库
-            </a> {/* 添加Markdown页面链接 */}
+            </a> 
           <a 
             onClick={() => handlePageChange("contact")} 
             className="hover:bg-orange-300 transition duration-300 cursor-pointer px-3 py-2 rounded"
@@ -125,7 +125,12 @@ export default function Component() {
         </header>
 
         {/* 动画容器 */}
-        <div className={`transition-all duration-300 ease-in-out ${animate ? 'transform translate-x-full opacity-0' : 'transform translate-x-0 opacity-100'}`}>
+        <div
+          className={`transition-all duration-300 ease-in-out ${
+            animate ? 'transform translate-x-full opacity-0' : 'transform translate-x-0 opacity-100'
+          } ${currentPage === "markdown" ? 'w-full' : 'w-auto'}`}
+        >
+
           {/* 根据当前页面状态显示内容 */}
           {currentPage === "home" && (
             <section className="text-center">

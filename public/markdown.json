@@ -1,27 +1,27 @@
 [
     {
       "type": "web",
-      "path": "https://icu.tiangucloud.org/markdown/web",
-      "markdown": ""
+      "path": "/markdown/web",
+      "markdown": "php伪协议"
     },
     {
       "type": "misc",
-      "path": "https://icu.tiangucloud.org/markdown/misc",
+      "path": "/markdown/misc",
       "markdown": ""
     },
     {
       "type": "crypto",
-      "path": "https://icu.tiangucloud.org/markdown/crypto",
+      "path": "/markdown/crypto",
       "markdown": ""
     },
     {
       "type": "pwn",
-      "path": "https://icu.tiangucloud.org/markdown/pwn",
+      "path": "/markdown/pwn",
       "markdown": "mprotect函数可以修改内存栈的权限"
     },
     {
       "type": "reverse",
-      "path": "https://icu.tiangucloud.org/markdown/reverse",
+      "path": "/markdown/reverse",
       "markdown": ""
     }
   ]
